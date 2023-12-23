@@ -21,7 +21,10 @@
 			<version>1.7.25</version>
 		</dependency>
 	</dependencies>
-
+	
+	<properties>
+                   <sonar.host.url>http://18.222.213.94:9000/</sonar.host.url>
+	</properties>
 	<build>
 		<plugins>
 			<plugin>
