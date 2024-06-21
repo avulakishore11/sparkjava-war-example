@@ -10,12 +10,7 @@ pool:
   name: 'pool1'
 
 steps:
-- task: JavaToolInstaller@0
-  displayName: 'java-8 installed'
-  inputs:
-    versionSpec: '8'
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'PreInstalled'
+
 - task: Maven@3
   displayName: 'Build with maven'
   inputs:
@@ -23,7 +18,6 @@ steps:
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
